@@ -1,0 +1,23 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <div class="signup-form">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="login-signup">
+                <p><button typle="submit">Ro'yxatdan o'tish</button></p>
+                <p><a href="{% url 'login' %}">Tizimga kirish</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
